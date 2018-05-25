@@ -6,14 +6,16 @@ import br.com.game.estrutura.player.saude.VidaDoPlayer;
 
 public class Vocacao {
 	
-	private Tipo tipo;
+	private TipoVocacao tipo;
 	private Integer ataque;
 	private Integer defesa;
 	private SaudeDoPlayer vida;
 	private SaudeDoPlayer mana;
 	private InfoPlayer level;
+	private String nome;
 	
-	public Vocacao(Tipo tipo){
+	public Vocacao(String nome, TipoVocacao tipo){
+		this.nome = nome;
 		this.tipo = tipo;
 		this.level = new LevelDoPlayer();
 		this.vida = new VidaDoPlayer(tipo.vida, tipo.vida, tipo.taxaDeRegeneracaoVida);
@@ -21,6 +23,7 @@ public class Vocacao {
 		this.ataque = tipo.getAtaque();
 		this.defesa = tipo.getDefesa();
 	}
+	
 	
 	public Integer getAtaque() {
 		return ataque;

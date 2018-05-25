@@ -1,6 +1,6 @@
 package br.com.game.estrutura.player;
 
-public enum Tipo {
+public enum TipoVocacao {
 
 	GUERREIRO(50, 40, 100, 5, 50, 2), 
 	ARQUEIRO(60, 30, 80, 4, 60, 2),
@@ -16,7 +16,7 @@ public enum Tipo {
 	public int mana;
 	public int taxaDeRegeneracaoMana;
 
-	Tipo(int ataque, int defesa, int vida, int taxaDeRegeneracaoDeVida, int mana, int taxaDeRegeneracaoDeMana) {
+	TipoVocacao(int ataque, int defesa, int vida, int taxaDeRegeneracaoDeVida, int mana, int taxaDeRegeneracaoDeMana) {
 		this.ataque = ataque;
 		this.defesa = defesa;
 		this.vida = vida;

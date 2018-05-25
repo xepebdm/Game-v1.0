@@ -8,7 +8,7 @@ class VocacaoTest {
 
 	@Test
 	void testDeValoresIniciais() {
-		Vocacao vocacao = new Vocacao(Tipo.ANAO);
+		Vocacao vocacao = new Vocacao("Alex", TipoVocacao.ANAO);
 		assertEquals(50, (int)vocacao.getAtaque());
 		assertEquals(50, (int)vocacao.getDefesa());
 		
