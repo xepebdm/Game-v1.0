@@ -32,4 +32,16 @@ public class Vocacao {
 	public Integer getDefesa() {
 		return defesa;
 	}
+	
+	public Integer getMaximoVida() {
+		return vida.getMaximo();
+	}
+	
+	public Integer getVidaAtual(int dano) {
+		return vida.getValorAtual() - dano;
+	}
+	
+	public void adicionaExperiencia(int valor) {
+		level.adicionaExp(valor);
+	}
 }
