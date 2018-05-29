@@ -38,7 +38,11 @@ public class Vocacao {
 	}
 	
 	public Integer getVidaAtual(int dano) {
-		return vida.getValorAtual() - dano;
+		return vida.getValorAtual(dano);
+	}
+	
+	public Integer getVidaAtual() {
+		return vida.getValorAtual();
 	}
 	
 	public void adicionaExperiencia(int valor) {

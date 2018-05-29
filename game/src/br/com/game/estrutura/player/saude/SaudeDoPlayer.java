@@ -40,6 +40,12 @@ public abstract class SaudeDoPlayer implements InfoPlayer {
 		return maximo;
 	}
 
+	public int getValorAtual(int dano) {
+		limite();
+		valorAtual -= dano;
+		return valorAtual;
+	}
+
 	public int getValorAtual() {
 		limite();
 		return valorAtual;

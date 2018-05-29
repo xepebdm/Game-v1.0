@@ -25,7 +25,7 @@ public class ModoBatalha {
 			playerGanhou();
 	}
 	
-	private void playerGanhou() {
+	protected void playerGanhou() {
 		player.adicionaExperiencia(monstro.getExperiencia());
 		System.out.println("Player ganhou a batalha!");
 	}

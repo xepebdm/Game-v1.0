@@ -35,8 +35,8 @@ public class Monstro {
 	}
 
 	public int reduzirVida(int ataqueDoPlayer) {
-		this.life -= ataqueDoPlayer;
-		return this.life;
+		life -= ataqueDoPlayer;
+		return life;
 	}
 
 	public int getExperiencia() {
