@@ -48,4 +48,9 @@ public class Vocacao {
 	public void adicionaExperiencia(int valor) {
 		level.adicionaExp(valor);
 	}
+
+
+	public String getNome() {
+		return nome;
+	}
 }

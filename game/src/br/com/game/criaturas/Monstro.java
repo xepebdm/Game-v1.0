@@ -2,7 +2,7 @@ package br.com.game.criaturas;
 
 public class Monstro {
 
-	private ListaDeMonstros nome;
+	private String nome;
 	private int life;
 	private int mana;
 	private int ataque;
@@ -10,7 +10,7 @@ public class Monstro {
 	private int experiencia;
 
 	public Monstro(ListaDeMonstros nome) {
-		this.nome = nome;
+		this.nome = nome.getNome();
 		this.life = nome.getLife();
 		this.mana = nome.getMana();
 		this.ataque = nome.getAtaque();
@@ -41,6 +41,10 @@ public class Monstro {
 
 	public int getExperiencia() {
 		return experiencia;
+	}
+
+	public String getNome() {
+		return nome;
 	}
 
 }

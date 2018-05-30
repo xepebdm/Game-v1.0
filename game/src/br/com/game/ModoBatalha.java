@@ -17,6 +17,7 @@ public class ModoBatalha {
 	
 	public void ataque() {
 		int ataqueDoPlayer = player.getAtaque() - monstro.getDefesa();
+		System.out.println(player.getNome() + " atacou e causou " + ataqueDoPlayer);
 		
 		if (monstro.reduzirVida(ataqueDoPlayer) > 0)
 			monstroVivo = true;
@@ -25,13 +26,14 @@ public class ModoBatalha {
 			playerGanhou();
 	}
 	
-	protected void playerGanhou() {
+	private void playerGanhou() {
 		player.adicionaExperiencia(monstro.getExperiencia());
-		System.out.println("Player ganhou a batalha!");
+		System.out.println(player.getNome() + " ganhou a batalha!");
 	}
 
 	public void defesa() {
 		int ataqueDoMonstro = monstro.getAtaque() - player.getDefesa();
+		System.out.println( monstro.getNome() + " atacou e causou " + ataqueDoMonstro);
 		
 		if(player.getVidaAtual(ataqueDoMonstro) > 0)
 			playerVivo = true;
@@ -41,7 +43,7 @@ public class ModoBatalha {
 	}
 
 	private void playerMorreu() {
-		System.out.println("Player morreu!");
+		System.out.println(player.getNome() + " morreu!");
 	}
 	
 	
