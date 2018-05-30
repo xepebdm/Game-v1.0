@@ -1,7 +1,8 @@
-package br.com.game;
+package br.com.game.frame;
 
 import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -16,6 +17,8 @@ import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
+import br.com.game.Principal;
+
 public class Main extends JFrame {
 
 	private Principal principal;
@@ -25,15 +28,17 @@ public class Main extends JFrame {
 	private String name = "";
 	private String vocacao = "";
 	private List<JRadioButton> btn = new ArrayList<>();
+	private static Frame frame;
 
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
+
 			public void run() {
 				try {
-					Main frame = new Main();
+					frame = new Main();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -43,13 +48,13 @@ public class Main extends JFrame {
 	}
 
 	/**
-	 * Create the frame.
+	 * Create the Main frame.
 	 */
 	public Main() {
 		setTitle("Main");
 		setAlwaysOnTop(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(10, 10, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setForeground(Color.LIGHT_GRAY);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -120,6 +125,9 @@ public class Main extends JFrame {
 					if (button.isSelected() && (name.length() > 0)) {
 						vocacao = button.getText();
 						principal = new Principal(name, vocacao);
+						PrincipalFrame principalFrame = new PrincipalFrame();
+						frame.setVisible(false);
+						frame = principalFrame.principalFrame();
 						break;
 					}
 				}
